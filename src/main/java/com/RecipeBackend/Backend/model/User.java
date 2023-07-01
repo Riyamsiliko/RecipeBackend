@@ -1,5 +1,7 @@
 package com.RecipeBackend.Backend.model;
 
+import javax.management.relation.Role;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
