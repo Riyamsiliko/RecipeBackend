@@ -25,6 +25,8 @@ public class recipeController {
     @Autowired
     private recipeService rService;
 
+
+
     @PostMapping("/add")
     public ResponseEntity<Recipe> createRecipe(@RequestBody Recipe recipe) {
         Recipe createdRecipe = rService.createRecipe(recipe);
@@ -34,6 +36,30 @@ public class recipeController {
     @GetMapping("/recipe")
     public List<Recipe> getAllRecipes() {
         return rService.getAllRecipes();
+    }
+
+    @GetMapping("/recipe/count")
+    public ResponseEntity<Long> countRecipe(){
+        long recipecount = rService.countrecipe();
+        return new ResponseEntity<>(recipecount, HttpStatus.OK);
+    }
+
+    @GetMapping("/recipe/title")
+    public ResponseEntity<Long> counttitle(){
+        long recipecount = rService.countrecipe();
+        return new ResponseEntity<>(recipecount, HttpStatus.OK);
+    }
+
+    @GetMapping("/recipe/ingredients(")
+    public ResponseEntity<Long> countingredients(){
+        long recipecount = rService.countrecipe();
+        return new ResponseEntity<>(recipecount, HttpStatus.OK);
+    }
+
+    @GetMapping("/recipe/instructions")
+    public ResponseEntity<Long> countinstructions(){
+        long recipecount = rService.countrecipe();
+        return new ResponseEntity<>(recipecount, HttpStatus.OK);
     }
 
     @GetMapping("/recipe/{id}")

@@ -19,6 +19,7 @@ public class userService {
         // Add any required business logic or validation before saving the user
         return userRepository.save(user);
     }
+    
 
    
     public List<User> getAllUsers() {

@@ -13,6 +13,21 @@ public class recipeService {
     @Autowired
     private recipeRepository rRepository;
     
+    public long counttitle(){
+        return rRepository.count();
+    }
+
+    public long countrecipe(){
+        return rRepository.count();
+    }
+
+    public long countingredients(){
+        return rRepository.count();
+    }
+
+    public long countinstructions(){
+        return rRepository.count();
+    }
     public Recipe createRecipe(Recipe recipe) {
         return rRepository.save(recipe) ;
     }
@@ -41,5 +56,8 @@ public class recipeService {
         
         return rRepository.save(updaterecipe);
 
+    }
+    public static List<Recipe> searchRecipesByTitle(String query) {
+        return null;
     }
 }
