@@ -50,7 +50,7 @@ public class recipeController {
         return new ResponseEntity<>(recipecount, HttpStatus.OK);
     }
 
-    @GetMapping("/recipe/ingredients(")
+    @GetMapping("/recipe/ingredients")
     public ResponseEntity<Long> countingredients(){
         long recipecount = rService.countrecipe();
         return new ResponseEntity<>(recipecount, HttpStatus.OK);
